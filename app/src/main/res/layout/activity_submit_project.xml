@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SubmitProjectActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:theme="@style/AppTheme.AppBarOverlay"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="25dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_back"
+                            android:layout_width="32dp"
+                            android:layout_height="29dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_baseline_keyboard_backspace_24" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="331dp"
+                            android:layout_height="37dp"
+                            android:layout_marginLeft="-15dp"
+                            android:layout_marginTop="5dp"
+                            app:srcCompat="@drawable/ic_gads_logo" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:text="@string/text_project_submission"
+                            android:textAppearance="@android:style/TextAppearance.Material.Large"
+                            android:textColor="@color/colorAccent" />
+
+                        <View
+                            android:id="@+id/divider2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/shape_separator" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/shape_input"
+                android:ems="10"
+                android:hint="@string/text_first_name"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextLastName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_input"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:hint="@string/text_last_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextFirstName"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_input"
+                android:ems="10"
+                android:hint="@string/text_email_address"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
+
+            <EditText
+                android:id="@+id/editTextProjectLink"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_input"
+                android:ems="10"
+                android:hint="@string/text_project_on_github_link"
+                android:inputType="textUri"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_submit_gradient"
+                android:minWidth="180dp"
+                android:minHeight="50dp"
+                android:text="@string/btn_submit"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextProjectLink" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
